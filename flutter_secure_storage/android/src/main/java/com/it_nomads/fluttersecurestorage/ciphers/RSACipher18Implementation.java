@@ -179,6 +179,7 @@ class RSACipher18Implementation {
                         .setDigests(KeyProperties.DIGEST_SHA256)
                         .setBlockModes(KeyProperties.BLOCK_MODE_ECB)
                         .setEncryptionPaddings(KeyProperties.ENCRYPTION_PADDING_RSA_PKCS1)
+                        .setInvalidatedByBiometricEnrollment(true)
                         .setCertificateSerialNumber(BigInteger.valueOf(1))
                         .setCertificateNotBefore(start.getTime())
                         .setCertificateNotAfter(end.getTime());
